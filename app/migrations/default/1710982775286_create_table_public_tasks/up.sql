@@ -1,0 +1,1 @@
+CREATE TABLE "public"."tasks" ("id" serial NOT NULL, "created_at" timestamptz NOT NULL DEFAULT now(), "updated_at" timestamptz NOT NULL DEFAULT now(), "title" varchar NOT NULL, "status" varchar NOT NULL, "priority" varchar NOT NULL, "user_id" varchar NOT NULL, PRIMARY KEY ("id") , FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON UPDATE cascade ON DELETE cascade);
